@@ -1,7 +1,19 @@
 // ./src/index.js
 
 //importing the dependencies
-const { app, startDatabase, getProducts, deleteProduct, updateProduct, createProduct} = require('./app-common.js')
+const { app,
+        startDatabase,
+        
+        getProducts,
+        deleteProduct,
+        updateProduct,
+        createProduct,
+        
+        deleteLogo,
+        updateLogo,
+        createLogo,
+        getLogos
+      } = require('./app-common.js')
 
 
 // endpoint to return all products
@@ -47,3 +59,18 @@ startDatabase().then(async () => {
     console.log('Web server has started on port 3001 http://localhost:3001');
   });
 });
+
+module.exports = {
+  app,
+  startDatabase,
+  createProduct,
+  deleteProduct,
+  updateProduct,
+  getProducts,
+  
+  deleteLogo,
+  updateLogo,
+  createLogo,
+  getLogos
+
+}

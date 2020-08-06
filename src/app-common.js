@@ -9,7 +9,7 @@ const {startDatabase} = require('./database/mongo-common');
 // mongo.startDatabase
 
 const {deleteProduct, updateProduct, createProduct, getProducts} = require('./database/products');
-
+const {deleteLogo, updateLogo, createLogo, getLogos} = require('./database/logos');
 // Other entities: Logos, CustomizationOptions, Material, Patterns
 
 // Bonus items: , Customer info, etc
@@ -37,6 +37,12 @@ module.exports = {
   createProduct,
   deleteProduct,
   updateProduct,
-  getProducts
+  getProducts,
+  
+  deleteLogo,
+  updateLogo,
+  createLogo,
+  getLogos
+
 }
 
