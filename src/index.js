@@ -20,9 +20,16 @@ const { app,
 // sets up the handler for requests to "/"
 // much like a switch statement
 app.get('/', async (req, res) => {
-  res.send(await getProducts());
+  res.send(' <a href="/products">products</a> | <a href="/logos">logos</a>');
 });
 
+app.get('/logos', async (req, res) => {
+  res.send(await getLogos());
+});
+
+app.get('/products', async (req, res) => {
+  res.send(await getProducts());
+});
 // we name our parameters apiRequest and apiResponse here but
 // there is no strong reason these variables could not be named `req` and `res` or `request` and `response`
 // the reason for this naming is so we are thinking about "api" tonight
